@@ -190,4 +190,7 @@ export default function MeetingsWizard() {
         button:disabled { background: #999; cursor: not-allowed; }
         .agenda-preview, .email-preview { background: #f5f5f5; padding: 15px; border-radius: 4px; margin-top: 15px; max-height: 400px; overflow-y: auto; }
         pre { white-space: pre-wrap; word-wrap: break-word; }
-      `}
+      `}</style>
+    </div>
+  )
+}
