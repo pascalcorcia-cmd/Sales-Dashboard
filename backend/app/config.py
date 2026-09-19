@@ -6,7 +6,7 @@ load_dotenv(os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file_
 
 ANTHROPIC_API_KEY = os.getenv("ANTHROPIC_API_KEY")
 CLAUDE_MODEL = os.getenv("CLAUDE_MODEL", "claude-sonnet-4-6")
-PORT = int(os.getenv("PORT", "8000"))
+PORT = 8000
 ENVIRONMENT = os.getenv("ENVIRONMENT", "development")
 UPLOAD_DIR = os.path.join(os.path.dirname(os.path.dirname(__file__)), "uploads")
 DB_PATH = os.path.join(os.path.dirname(os.path.dirname(__file__)), "conversations.db")
