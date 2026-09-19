@@ -14,7 +14,7 @@ const TABS = [
   { id: 'meetings', label: 'Gestion Réunions', icon: '📅' },
 ]
 
-export default function App() {
+function App() {
   const [activeTab, setActiveTab] = useState('chat')
   const [messages, setMessages] = useState([])
   const [input, setInput] = useState('')
