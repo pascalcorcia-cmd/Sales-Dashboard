@@ -7,10 +7,14 @@ import ToolOutput from './components/ToolOutput'
 import FileUpload from './components/FileUpload'
 import AccountPlan from './components/AccountPlan'
 import MeetingsWizard from './pages/MeetingsWizard'
+import AccountPlanning from './pages/AccountPlanning'
+import LeadQualification from './pages/LeadQualification'
 
 const TABS = [
   { id: 'chat', label: 'Chat IA', icon: '💬' },
   { id: 'account-plan', label: 'Account Plan', icon: '📊' },
+  { id: 'planning', label: 'Préparation RDV', icon: '🎤' },
+  { id: 'qualification', label: 'Qualification Leads', icon: '🎯' },
   { id: 'meetings', label: 'Gestion Réunions', icon: '📅' },
 ]
 
@@ -216,6 +220,10 @@ function App() {
       )}
 
       {activeTab === 'account-plan' && <AccountPlan />}
+
+      {activeTab === 'planning' && <AccountPlanning />}
+
+      {activeTab === 'qualification' && <LeadQualification />}
 
       {activeTab === 'meetings' && <MeetingsWizard />}
     </div>
