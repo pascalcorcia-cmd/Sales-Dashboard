@@ -20,6 +20,7 @@ COPY backend/ .
 COPY --from=frontend-build /app/frontend/dist ./static
 
 EXPOSE 8000
-HEALTHCHECK --interval=30s --timeout=5s CMD python -c "import urllib.request; urllib.request.urlopen('http://localhost:8000/health')" || exit 1
+ENV PORT=8000
+HEALTHCHECK --interval=30s --timeout=5s CMD python -c "import urllib.request, os; urllib.request.urlopen(f'http://localhost:{os.getenv(\"PORT\", 8000)}/health')" || exit 1
 
 CMD ["python", "start.py"]
