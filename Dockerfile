@@ -14,7 +14,7 @@ LABEL version="1.0.0"
 WORKDIR /app
 
 COPY backend/requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install --no-cache-dir --prefer-binary -r requirements.txt
 
 COPY backend/ .
 COPY --from=frontend-build /app/frontend/dist ./static
